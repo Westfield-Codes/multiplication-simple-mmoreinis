@@ -1,3 +1,5 @@
+/* NOTE TO STUDENT: Use this if you have to - but try to code based on the flowchart and comments in script.js only first! */
+
 /* Multiplication Quiz 
  * This program should ask five multiplication questions, displaying which question
  * is being asked, and counting the number of equations with at least one error.
