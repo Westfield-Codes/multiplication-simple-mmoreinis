@@ -1,4 +1,4 @@
-/* MULTIPLICATION QUIZ
+/* MULTIPLICATION SIMPLE
  * This program should ask five multiplication questions, displaying which question
  * is being asked, and counting the number of equations with at least one error.
  * FLOWCHART: https://lucid.app/lucidchart/5a3164fd-459f-494d-9cae-b4a6be593b13/view
