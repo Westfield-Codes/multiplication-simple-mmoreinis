@@ -4,7 +4,11 @@
  * FLOWCHART: https://lucid.app/lucidchart/5a3164fd-459f-494d-9cae-b4a6be593b13/view
  */
 
-main()
+/* Global Variables 
+ * right = number right
+ * questions = number of questions
+ */
+
 
 /* main controls the program. Calling askQuestions() provides feedback depending on the 
  * number right returned: Either "Perfect!" or it says how many right out of the number asked. 
@@ -27,8 +31,8 @@ function askQuestions() {
 
 /* askQuestion asks a multiplication question, using the question parameter to say which
  * question is being asked.  It returns 1 if correct, 0 if incorrect.
- * @param: question (integer 1-5)
- * @return: integer (0 or 1)
+ * @param: question (integer 1-questions)
+ * @return: integer (0 or 1) or boolean (true or fals)
  */
 function askQuestion(question){
   
