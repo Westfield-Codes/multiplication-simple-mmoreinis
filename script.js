@@ -18,7 +18,7 @@ function main() {
 /* askQuestions calls askQuestion() question number if times, sending the question number as an argument. 
  * It counts the number right returned, and return number right to main().
  * @param: none
- * @return: score (0-questions)
+ * @return: {integer} score (0-questions)
  */
 function askQuestions() {
 
@@ -26,8 +26,8 @@ function askQuestions() {
 
 /* askQuestion asks a multiplication question, using the question parameter to say which
  * question is being asked.  It returns 1 if correct, 0 if incorrect.
- * @param: question (integer 1-questions)
- * @return: integer (0 or 1) or boolean (true or fals)
+ * @param: {integer} question 
+ * @return: {integer} (0 or 1) or {boolean}
  */
 function askQuestion(question){
   
