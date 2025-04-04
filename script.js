@@ -18,7 +18,7 @@ function main() {
 /* askQuestions calls askQuestion() question number if times, sending the question number as an argument. 
  * It counts the number right returned, and return number right to main().
  * @param: none
- * @return: {integer} score (0-questions)
+ * @return: {integer} right (0-questions)
  */
 function askQuestions() {
 
