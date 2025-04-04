@@ -5,9 +5,11 @@
  */
 
 
-/* main controls the program. Calling askQuestions() provides feedback depending on the 
- * number right returned: Either "Perfect!" or it says how many right out of the number asked. 
+/* main controls the program. 
  * Store the number of questions to ask in a variable called questions.
+ * Call askQuestions, sending questions as an argument, which returns the number right. 
+ * Give feedback depending on the number right returned: Either "Perfect!" or say 
+ * how many right out of the number asked (questions). 
  * @param none
  * @return none
  */
@@ -15,19 +17,19 @@ function main() {
 
 }
 
-/* askQuestions calls askQuestion() question number if times, sending the question number as an argument. 
- * It counts the number right returned, and return number right to main().
- * @param: none
+/* askQuestions calls askQuestion() questions times (for loop), sending the question number as an argument. 
+ * It counts the number right returned, and returns number right to main() for feedback.
+ * @param: {integer} questions 
  * @return: {integer} right (0-questions)
  */
-function askQuestions() {
+function askQuestions(questions) {
 
 }
 
 /* askQuestion asks a multiplication question, using the question parameter to say which
  * question is being asked.  It returns 1 if correct, 0 if incorrect.
- * @param: {integer} question 
- * @return: {integer} (0 or 1) or {boolean}
+ * @param: {integer} question (1 - questions)
+ * @return: {integer} correct (0 or 1) or {boolean} correct
  */
 function askQuestion(question){
   
