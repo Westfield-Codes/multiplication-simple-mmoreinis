@@ -17,6 +17,7 @@ function main() {
 
 }
 
+
 /* askQuestions calls askQuestion() questions times (for loop), sending the question number as an argument. 
  * It counts the number right returned, and returns number right to main() for feedback.
  * @param: {integer} questions 
@@ -25,6 +26,7 @@ function main() {
 function askQuestions(questions) {
 
 }
+
 
 /* askQuestion asks a multiplication question, using the question parameter to say which
  * question is being asked.  It returns 1 if correct, 0 if incorrect.
