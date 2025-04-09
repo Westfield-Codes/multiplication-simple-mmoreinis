@@ -32,8 +32,9 @@ function setUp(){
         let high = changeVar("high");
         let questions = changeVar("questions");
     }
+    alert("New values set.");
+    return questions;
 }
-
 
 /* Function changeVar(variable)
  * Asks user which value to change variable to
@@ -43,7 +44,7 @@ function setUp(){
  */
 function changeVar(variable){
     let value = prompt("Choose your " + variable + " value");
-    
+    return value;
 }
 
  
