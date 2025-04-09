@@ -17,6 +17,35 @@ function main() {
     if (right == questions) alert("perfect!");
     else alert("You got " + right + " out of " + questions + ".");
  }
+
+
+/* Function setUp()
+ * Asks if user wants to keep defaults for low, high, questions. 
+ * If not default, prompts user to provide these values
+ * @param: none
+ * @return: {integer} questions
+ */
+function setUp(){
+    let defaults = confirm("Do you want to keep defaults?");
+    if (defaults == false) {
+        let low = changeVar("low");
+        let high = changeVar("high");
+        let questions = changeVar("questions");
+    }
+}
+
+
+/* Function changeVar(variable)
+ * Asks user which value to change variable to
+ * Parses value as integer
+ * @param: variable
+ * @return: {integer} value 
+ */
+function changeVar(variable){
+    let value = prompt("Choose your " + variable + " value");
+    
+}
+
  
  /* askQuestions calls askQuestion() question number if times, sending the question number as an argument.
   * It counts the number right returned, and return number right to main().
