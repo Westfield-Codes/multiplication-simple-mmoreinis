@@ -14,6 +14,7 @@
  * @return none
  */
 function main() {
+    let right = askQuestions(2);
 
 }
 
@@ -23,7 +24,7 @@ function main() {
  * @return: {integer} right (0-questions)
  */
 function askQuestions(questions) {
-
+    return questions;
 }
 
 /* askQuestion asks a multiplication question, using the question parameter to say which
@@ -32,5 +33,5 @@ function askQuestions(questions) {
  * @return: {integer} correct (0 or 1) or {boolean} correct
  */
 function askQuestion(question){
-  
+  return true;
 }
