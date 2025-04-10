@@ -6,6 +6,9 @@
  * Set default values for low and high factors
  * Initialize mistakes array
  */
+var high = 9;
+var low = 3;
+
 
 /* Function main() THIS REPLACES askQuestions(
  * Calls setup to change default values
@@ -15,6 +18,9 @@
  * @param: none
  * @return: none
  */
+function main(){
+
+}
 
 
 /* Function setUp()
@@ -23,7 +29,10 @@
  * @param: none
  * @return: {integer} questions
  */
-
+function setUp(){
+    let questions = 5;
+    return questions;
+}
 
 /* Function changeVar(variable)
  * Asks user which value to change variable to
@@ -31,7 +40,10 @@
  * @param: variable
  * @return: {integer} value 
  */
-
+function changeVar(variable){
+    let value = 3;
+    return value;
+}
 
 /* Function askQuestion(question) 
  * Asks a multiplication question: 2 factors between low and high ranges
@@ -39,7 +51,9 @@
  * @param: {integer} question 
  * @return: boolean value 
  */
-
+function askQuestion(question){
+    return true;
+}
 
 /* Function showStats()
  * Provides feedback on total correct out of total asked. 
@@ -51,6 +65,9 @@
  * @param: score, questions
  * @return: none
  */
+function showStats(score, questions){
+
+}
 
 
 /* Function showTable(factor)
@@ -60,12 +77,17 @@
  * @param: factor
  * @return: none
  */
+function showTable(factor){
 
+}
 
 /* Function showErrors(errors)
  * Provides feedback on errors by showing pairs of factors from the mistakes array (global).
  * statsAnalysis() shows the highest most frequent factor in mistakes[]  
  * @param: errors
  * @return: none
+ */
+function showErrors(errors){
 
+}
 
