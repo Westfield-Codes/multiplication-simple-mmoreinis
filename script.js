@@ -53,7 +53,8 @@ function setUp(){
  * @return: {integer} value 
  */
 function changeVar(variable){
-    let value = 3;
+    let value = prompt("Choose your " + variable + " value");
+    value = parseInt(value);
     return value;
 }
 
