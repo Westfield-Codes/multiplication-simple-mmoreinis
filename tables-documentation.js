@@ -1,4 +1,3 @@
-
 /* MULTIPLICATION TABLES
  * FLOWCHART:https://lucid.app/lucidchart/3e0bd150-cafd-4a4b-a703-a1919eafbd7a/edit?page=GeKRoDTH-sii#
  */
@@ -21,7 +20,8 @@
 
 
 /* Function setUp()
- * Asks if user wants to keep defaults for low, high, questions. 
+ * Initializes questions with a default value (5)
+ * Asks if user wants to keep defaults for low (global), high (global), questions. 
  * If not default, prompts user to provide these values
  * @param: none
  * @return: {integer} questions
@@ -44,22 +44,13 @@
  */
 
 
-/* Function askQuestion(question) 
- * Asks a multiplication question: 2 factors between low and high ranges
- * Provides feedback (correct?), returns true if correct, false if not * Adds missed factors to mistakes array.
- * @param: {integer} question 
- * @return: boolean value 
- */
-
-
-
 /* Function showStats()
  * Provides feedback on total correct out of total asked. 
  * If perfect score, displays "Perfection Badge"
  * If not perfect, displays how many right out of questions
- * Then calls showErrors sending number of errors as parameter. 
+ * Then displays mistake factors in pairs to inform story. 
  * While user wants to study tables, calls showTable for a factor.
- * Prompt changes from "any tables" to "more tables" 
+ * Prompt changes from "any tables" to "more tables". 
  * @param: score, questions
  * @return: none
  */
@@ -67,16 +58,16 @@
 
 /* Function showTable(factor)
  * Display the table for the factor passed as a parameter
- * Builds table line by line with a loop, then shows table 
- * One line for each factor value, low to high 
+ * Builds table line by line with a loop, then shows table * One line for each factor value. low to high 
  * @param: factor
  * @return: none
  */
 
 
-/* Function showErrors(errors)
- * Provides feedback on errors by showing pairs of factors from the mistakes array (global).
- * statsAnalysis() shows the highest most frequent factor in mistakes[]  
+/* Function showErrors()
+ * Provides feedback on errors by showing pairs of factors.
+ * statsAnalysis() shows most frequent factor in errors.  
  * @param: errors
  * @return: none
  */
+

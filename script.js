@@ -2,12 +2,10 @@
  * FLOWCHART:https://lucid.app/lucidchart/3e0bd150-cafd-4a4b-a703-a1919eafbd7a/edit?page=GeKRoDTH-sii#
  */
 
-
 /* Global Variables 
  * Set default values for low and high factors
  * Initialize mistakes array
  */
-
 
 /* Function main() THIS REPLACES askQuestions(
  * Calls setup to change default values
@@ -43,15 +41,6 @@
  */
 
 
-/* Function askQuestion(question) 
- * Asks a multiplication question: 2 factors between low and high ranges
- * Provides feedback (correct?), returns true if correct, false if not * Adds missed factors to mistakes array.
- * @param: {integer} question 
- * @return: boolean value 
- */
-
-
-
 /* Function showStats()
  * Provides feedback on total correct out of total asked. 
  * If perfect score, displays "Perfection Badge"
@@ -78,4 +67,5 @@
  * statsAnalysis() shows the highest most frequent factor in mistakes[]  
  * @param: errors
  * @return: none
- */
+
+
