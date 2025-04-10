@@ -1,22 +1,22 @@
-/* MULTIPLICATION SIMPLE
- * This program should ask multiplication questions, displaying which question
- * is being asked, and counting the number of equations with at least one error.
- * FLOWCHART: https://lucid.app/lucidchart/5a3164fd-459f-494d-9cae-b4a6be593b13/view
+/* MULTIPLICATION TABLES
+ * FLOWCHART:https://lucid.app/lucidchart/3e0bd150-cafd-4a4b-a703-a1919eafbd7a/edit?page=GeKRoDTH-sii#
  */
 
 
-/* main controls the program. Calling askQuestions() provides feedback depending on the
- * number right returned: Either "Perfect!" or it says how many right out of the number asked.
- * Store the number of questions to ask in a variable called questions.
- * @param none
- * @return none
+/* Global Variables 
+ * Set default values for low and high factors
+ * Initialize mistakes array
  */
-function main() {
-    let questions = 5;
-    let right = askQuestions(questions);
-    if (right == questions) alert("perfect!");
-    else alert("You got " + right + " out of " + questions + ".");
- }
+
+
+/* Function main() THIS REPLACES askQuestions(
+ * Calls setup to change default values
+ * Calls askQuestion with question number argument
+ * Keeps score based on returned values from askQuestion
+ * Calls showStats, which calls showTable 
+ * @param: none
+ * @return: none
+ */
 
 
 /* Function setUp()
@@ -25,16 +25,7 @@ function main() {
  * @param: none
  * @return: {integer} questions
  */
-function setUp(){
-    let defaults = confirm("Do you want to keep defaults?");
-    if (defaults == false) {
-        let low = changeVar("low");
-        let high = changeVar("high");
-        let questions = changeVar("questions");
-    }
-    alert("New values set.");
-    return questions;
-}
+
 
 /* Function changeVar(variable)
  * Asks user which value to change variable to
@@ -42,40 +33,49 @@ function setUp(){
  * @param: variable
  * @return: {integer} value 
  */
-function changeVar(variable){
-    let value = prompt("Choose your " + variable + " value");
-    return value;
-}
 
- 
- /* askQuestions calls askQuestion() question number if times, sending the question number as an argument.
-  * It counts the number right returned, and return number right to main().
-  * @param: none
-  * @return: {integer} score (0-questions)
-  */
- function askQuestions(questions) {
-    right = 0;
-    for (let question = 1; question <= questions; question++) {
-       right += askQuestion(question);
-    }
-    return right;
- }
- 
- /* askQuestion asks a multiplication question, using the question parameter to say which
-  * question is being asked. It returns 1 if correct, 0 if incorrect.
-  * @param: {integer} question
-  * @return: {integer} (0 or 1) or {boolean}
-  */
- function askQuestion(question) {
-    var a = Math.floor(Math.random() * 9) + 1;
-    var b = Math.floor(Math.random() * 9) + 1;
-    product = a * b;
-    equation = "question " + question + ": " + a + "*" + b + "=?";
-    answer = prompt(equation);
-    if (answer == product) {
-       alert("Correct!");
-       return true;
-    } else alert("Incorect!"); {
-       return false;
-    }
- }
+
+/* Function askQuestion(question) 
+ * Asks a multiplication question: 2 factors between low and high ranges
+ * Provides feedback (correct?), returns true if correct, false if not * Adds missed factors to mistakes array.
+ * @param: {integer} question 
+ * @return: boolean value 
+ */
+
+
+/* Function askQuestion(question) 
+ * Asks a multiplication question: 2 factors between low and high ranges
+ * Provides feedback (correct?), returns true if correct, false if not * Adds missed factors to mistakes array.
+ * @param: {integer} question 
+ * @return: boolean value 
+ */
+
+
+
+/* Function showStats()
+ * Provides feedback on total correct out of total asked. 
+ * If perfect score, displays "Perfection Badge"
+ * If not perfect, displays how many right out of questions
+ * Then calls showErrors sending number of errors as parameter. 
+ * While user wants to study tables, calls showTable for a factor.
+ * Prompt changes from "any tables" to "more tables" 
+ * @param: score, questions
+ * @return: none
+ */
+
+
+/* Function showTable(factor)
+ * Display the table for the factor passed as a parameter
+ * Builds table line by line with a loop, then shows table 
+ * One line for each factor value, low to high 
+ * @param: factor
+ * @return: none
+ */
+
+
+/* Function showErrors(errors)
+ * Provides feedback on errors by showing pairs of factors from the mistakes array (global).
+ * statsAnalysis() shows the highest most frequent factor in mistakes[]  
+ * @param: errors
+ * @return: none
+ */
