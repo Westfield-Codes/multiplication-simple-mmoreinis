@@ -21,7 +21,7 @@
 
 /* Function setUp()
  * Asks if user wants to keep defaults for low, high, questions. 
- * If not default, prompts user to provide these values
+ * If not default, calls changeVar to prompt for new values
  * @param: none
  * @return: {integer} questions
  */
