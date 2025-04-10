@@ -19,7 +19,12 @@ var low = 3;
  * @return: none
  */
 function main(){
-
+    let score = 0;
+    let questions = setUp();
+    for (let question = 1; question <= questions; question++ ) {
+        score += askQuestion(question);
+    }
+    showStats(score,questions);
 }
 
 
@@ -31,6 +36,13 @@ function main(){
  */
 function setUp(){
     let questions = 5;
+    let defaults = confirm("Keep defaults?");
+    if (defaults == false) {
+        low = changeVar("low");
+        high = changeVar("high");
+        questions = changeVar("questions");
+    }
+    else alert("Defaults kept");
     return questions;
 }
 
