@@ -20,7 +20,8 @@
 
 
 /* Function setUp()
- * Asks if user wants to keep defaults for low, high, questions. 
+ * Initializes questions with a default value (5)
+ * Asks if user wants to keep defaults for low (global), high (global), questions. 
  * If not default, prompts user to provide these values
  * @param: none
  * @return: {integer} questions
@@ -43,22 +44,13 @@
  */
 
 
-/* Function askQuestion(question) 
- * Asks a multiplication question: 2 factors between low and high ranges
- * Provides feedback (correct?), returns true if correct, false if not * Adds missed factors to mistakes array.
- * @param: {integer} question 
- * @return: boolean value 
- */
-
-
-
 /* Function showStats()
  * Provides feedback on total correct out of total asked. 
  * If perfect score, displays "Perfection Badge"
  * If not perfect, displays how many right out of questions
  * Then displays mistake factors in pairs to inform story. 
  * While user wants to study tables, calls showTable for a factor.
- * Prompt changes from "any tables" to "more tables" 
+ * Prompt changes from "any tables" to "more tables". 
  * @param: score, questions
  * @return: none
  */
