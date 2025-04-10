@@ -20,8 +20,7 @@
 
 
 /* Function setUp()
- * Initializes questions with a default value (5)
- * Asks if user wants to keep defaults for low (global), high (global), questions. 
+ * Asks if user wants to keep defaults for low, high, questions. 
  * If not default, prompts user to provide these values
  * @param: none
  * @return: {integer} questions
@@ -48,10 +47,17 @@
  * Provides feedback on total correct out of total asked. 
  * If perfect score, displays "Perfection Badge"
  * If not perfect, displays how many right out of questions
- * Then displays mistake factors in pairs to inform story. 
+ * Calls showErrors to display which factors led to errors to inform study.
  * While user wants to study tables, calls showTable for a factor.
- * Prompt changes from "any tables" to "more tables". 
+ * Prompt changes from "any tables" to "more tables" 
  * @param: score, questions
+ * @return: none
+ */
+
+/* Function showErrors(errors)
+ * Provides feedback on errors by showing pairs of factors.
+ * statsAnalysis() shows most frequent factor in errors.  
+ * @param: errors
  * @return: none
  */
 
@@ -62,12 +68,3 @@
  * @param: factor
  * @return: none
  */
-
-
-/* Function showErrors()
- * Provides feedback on errors by showing pairs of factors.
- * statsAnalysis() shows most frequent factor in errors.  
- * @param: errors
- * @return: none
- */
-
