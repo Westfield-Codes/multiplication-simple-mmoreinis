@@ -43,23 +43,21 @@
  */
 
 
-/* Function askQuestion(question) 
- * Asks a multiplication question: 2 factors between low and high ranges
- * Provides feedback (correct?), returns true if correct, false if not * Adds missed factors to mistakes array.
- * @param: {integer} question 
- * @return: boolean value 
- */
-
-
-
 /* Function showStats()
  * Provides feedback on total correct out of total asked. 
  * If perfect score, displays "Perfection Badge"
  * If not perfect, displays how many right out of questions
- * Then displays mistake factors in pairs to inform story. 
+ * Calls showErrors to display which factors led to errors to inform study.
  * While user wants to study tables, calls showTable for a factor.
  * Prompt changes from "any tables" to "more tables" 
  * @param: score, questions
+ * @return: none
+ */
+
+/* Function showErrors(errors)
+ * Provides feedback on errors by showing pairs of factors.
+ * statsAnalysis() shows most frequent factor in errors.  
+ * @param: errors
  * @return: none
  */
 
@@ -70,12 +68,3 @@
  * @param: factor
  * @return: none
  */
-
-
-/* Function showErrors()
- * Provides feedback on errors by showing pairs of factors.
- * statsAnalysis() shows most frequent factor in errors.  
- * @param: errors
- * @return: none
- */
-
