@@ -92,7 +92,21 @@ function askQuestion(question){
  * @return: none
  */
 function showStats(score, questions){
-
+    let tables = true;
+    let factor = 0;
+    let more = "any";
+    if (score == questions) alert("Perfection badge!");
+    else{
+        alert("You got " + score + " out of " + questions + " right.");
+    }
+    while (tables == true) {
+        let tables = confirm("Do you want to study " + more + " tables?");
+        if (tables == true) {
+            factor = prompt("Show table for which factor?");
+            showTable(factor);
+            more = "more";
+        }
+    }
 }
 
 
