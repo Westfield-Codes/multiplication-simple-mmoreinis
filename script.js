@@ -100,7 +100,7 @@ function showStats(score, questions){
         alert("You got " + score + " out of " + questions + " right.");
     }
     while (tables == true) {
-        let tables = confirm("Do you want to study " + more + " tables?");
+        tables = confirm("Do you want to study " + more + " tables?");
         if (tables == true) {
             factor = prompt("Show table for which factor?");
             showTable(factor);
@@ -118,7 +118,11 @@ function showStats(score, questions){
  * @return: none
  */
 function showTable(factor){
-
+    let table = "Times table for " + factor +"\n";
+    for (let line = low; line <= high; line++){
+        table += factor + " * " + line + " = " + factor * line + "\n";
+    }
+    alert(table);
 }
 
 /* Function showErrors(errors)
