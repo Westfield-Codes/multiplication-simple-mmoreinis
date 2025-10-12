@@ -3,6 +3,7 @@
  * is being asked, and counting the number of equations with at least one error.
  * FLOWCHART: https://lucid.app/lucidchart/5a3164fd-459f-494d-9cae-b4a6be593b13/view
  */
+// NOTE TO STUDENT: Use this if you have to - but try to code based on the flowchart and comments in script.js only first! 
 
 
 /* main controls the program. 
