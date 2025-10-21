@@ -34,6 +34,7 @@ function askQuestions(questions) {
         question++;
     }
     return right;
+    // test
 }
 
 
