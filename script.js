@@ -1,38 +1,32 @@
-/* MULTIPLICATION SIMPLE
- * This program should ask multiplication questions, displaying which question
- * is being asked, and counting the number of equations with at least one error.
- * FLOWCHART: https://lucid.app/lucidchart/5a3164fd-459f-494d-9cae-b4a6be593b13/view
- */
+var mistakes = [5,8,6,8,6,9,4,9,7,8,6,4];
+var high = 9;
 
-
-/* main controls the program. 
- * Store the number of questions to ask in a variable called questions.
- * Call askQuestions, sending questions as an argument, which returns the number right. 
- * Give feedback depending on the number right returned: Either "Perfect!" or say 
- * how many right out of the number asked (questions). 
- * @param none
- * @return none
- */
 function main() {
-
+    showStats();
 }
 
+function showStats() {
+    alert(showErrors());
+} 
 
-/* askQuestions calls askQuestion() questions times (for loop), sending the question number as an argument. 
- * It counts the number right returned, and returns number right to main() for feedback.
- * @param: {integer} questions 
- * @return: {integer} right (0-questions)
- */
-function askQuestions(questions) {
-
+function showErrors() {
+   return "The highest factor with the most errors was " + statsAnalysis() + ". Study tables for it!"
 }
 
-
-/* askQuestion asks a multiplication question, using the question parameter to say which
- * question is being asked.  It returns 1 if correct, 0 if incorrect.
- * @param: {integer} question (1 - questions)
- * @return: {integer} correct (0 or 1) or {boolean} correct
- */
-function askQuestion(question){
-  
-}
+function statsAnalysis() {
+    let mostErrors = 0, highFactor = 0, frequency = []; 
+    for (let i = 0; i <= high; i++) {
+        frequency.push(0);
+    }
+    for (let factor = 0; factor < mistakes.length; factor ++){
+        error = mistakes[factor];
+        frequency[error]++;
+    }
+    for (let ef = 0; ef < frequency.length; ef++) {
+        if (frequency[ef] >= mostErrors) {
+            mostErrors = frequency[ef];
+            highFactor = ef;
+        }
+    }
+    return highFactor;
+} 
